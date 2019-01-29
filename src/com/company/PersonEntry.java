@@ -38,9 +38,11 @@ public class PersonEntry {
         this.birthday = birthday;
     }
 
-    public PersonEntry() {
+    public PersonEntry(String name, int phoneNumber, String Address, int birthday) {
         this.name;
-        this.
+        this.phoneNumber;
+        this.address;
+        this.birthday;
     }
 
 }
