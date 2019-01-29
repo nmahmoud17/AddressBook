@@ -7,6 +7,8 @@ public class AddressBook {
 
     public static void main(String[] args) {
 
+        AddressBookOptions myOptions = new AddressBookOptions();
+
         boolean running = true;
         int userInput = 0;
 
@@ -24,11 +26,28 @@ public class AddressBook {
 
             switch (userInput) {
 
-                case 1: //View Entries
+                case 1: //View All Entries
+
+                    for (AddressBook i: myOptions) {
+
+
+                    }
+
                 case 2: //Add Person
+                    PersonInformation myPersonsInfo = new PersonInformation(getStringAnswer("What is the person's name you'd like to add?"),
+                            getIntAnswer("Enter their phone number:  "),
+                                    getStringAnswer("Enter their address: "),
+                                            getIntAnswer("Enter their birthday: "));
+
+                    myOptions.addPerson(myPersonsInfo);
+
+
                 case 3: //Search Person by Name
+
                 case 4: //search by #
+
                 case 5: //delete
+
                 case 6: //Exit
                     System.out.println("Thanks for using your Address Book!");
                     running = false;
@@ -39,4 +58,20 @@ public class AddressBook {
 
         } while (running);
     }
+
+    public static String getStringAnswer (String question) {
+        System.out.println(question);
+        return myScanner.nextLine();
+    }
+
+
+    public static int getIntAnswer (String question) {
+        int input;
+        System.out.println(question);
+        input = myScanner.nextInt();
+        myScanner.nextLine();
+        return input;
+
+    }
+
 }

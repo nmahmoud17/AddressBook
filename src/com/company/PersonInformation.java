@@ -1,6 +1,6 @@
 package com.company;
 
-public class PersonEntry {
+public class PersonInformation {
     private String name;
     private int phoneNumber;
     private String address;
@@ -38,11 +38,18 @@ public class PersonEntry {
         this.birthday = birthday;
     }
 
-    public PersonEntry(String name, int phoneNumber, String Address, int birthday) {
-        this.name;
-        this.phoneNumber;
-        this.address;
-        this.birthday;
+    public PersonInformation(String name, int phoneNumber, String address, int birthday) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.birthday = birthday;
+    }
+
+    public void printDetails() {
+        System.out.println("First name: " + name);
+        System.out.println("Phone number: " + phoneNumber);
+        System.out.println("Address: " + address);
+        System.out.println("Birthday: " + birthday);
     }
 
 }
